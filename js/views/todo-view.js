@@ -63,6 +63,9 @@ var app = app || {};
 		},
 
 		isHidden: function () {
+			if(app.TodoFilter == 'priority')
+				return !this.model.get('priority');
+				
 			return this.model.get('completed') ?
 				app.TodoFilter === 'active' :
 				app.TodoFilter === 'completed';

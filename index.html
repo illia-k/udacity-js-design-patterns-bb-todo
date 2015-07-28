@@ -34,7 +34,10 @@
 			<input class="edit" value="<%- title %>">
 		</script>
 		<script type="text/template" id="stats-template">
-			<span id="todo-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>
+			<span id="todo-count">
+				<strong><%= remaining %></strong> 
+				 <%= remaining === 1 ? 'item' : 'items' %> left
+			</span>
 			<ul id="filters">
 				<li>
 					<a class="selected" href="#/">All</a>
@@ -44,6 +47,9 @@
 				</li>
 				<li>
 					<a href="#/completed">Completed</a>
+				</li>
+				<li>
+					<a href="#/priority">Priority</a>
 				</li>
 			</ul>
 			<% if (completed) { %>
